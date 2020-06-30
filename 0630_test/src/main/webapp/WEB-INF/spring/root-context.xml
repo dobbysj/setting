@@ -12,10 +12,10 @@
 	        <property name="username" value="jardin_team2"/>
 	        <property name="password" value="1234"/>
    		 </bean>
-   		 <!-- 커넥션 pool을 사용할 dataSource bean 셋팅-->
+	 	<!-- 커넥션 pool을 사용할 dataSource bean 셋팅-->
  	   <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
-        <constructor-arg ref="hikariConfig"/>
-  	  </bean>
+        	<constructor-arg ref="hikariConfig"/>
+	  	</bean>
   	  <!-- DB connection 및 SQL전달/리턴을 위한 SQLSession을 만들어내는 SQLSessionFactory bean 셋팅-->
   	  <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
