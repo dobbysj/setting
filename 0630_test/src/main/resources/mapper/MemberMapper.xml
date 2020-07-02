@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.javalec.ex.dao.BoardDao">
+
+	
+	<select id="loginCheck" resultType="Integer">
+		select count(*) from where mid=#{mdto.mid} and mpw=#{mdto.mpw}
+	</select>
+	<select id="loginIdCheck" resultType="Integer">
+		select count(*) from where mid=#{mdto.mid}
+	</select>
+	<select id="loginPwCheck" resultType="Integer">
+		select count(*) from where mpw=#{mdto.mpw}
+	</select>
+
+</mapper>
