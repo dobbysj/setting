@@ -14,6 +14,9 @@ public class MemberServiceImp implements MemberService {
 	
 	@Override
 	public int loginCheck(MemberDto mdto) {
+		System.out.println("왜 안될까? - 서비스 임프");
+		mdao.loginCheck(mdto);
+		System.out.println("여긴 왔을까 서비스임프");
 		return mdao.loginCheck(mdto);
 	}
 	
@@ -23,9 +26,11 @@ public class MemberServiceImp implements MemberService {
 	}
 
 	@Override
-	public int loginPwCheck(MemberDto mdto) {
-		return mdao.loginPwCheck(mdto);
+	public int idCheck(String mid) {
+		System.out.println("mid service imp" + mid);
+		return mdao.idCheck(mid);
 	}
+
 
 	
 	
